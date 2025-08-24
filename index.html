@@ -1,1 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Basic SEO -->
+<meta name="title" content="SHSSS Headlines">
+<meta name="description" content="SHSSS For us,From us.">
 
+<!-- Open Graph (for Google, Facebook, LinkedIn) -->
+<meta property="og:title" content="SHSSS Headlines">
+<meta property="og:description" content="SHSSS For us,From us">
+<meta property="og:image" content="https://SHSSS-org.github.io/preview.jpg">
+<meta property="og:url" content="https://SHSSS-org.github.io/">
+
+<!-- Twitter Card (for Twitter/X) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My Website Title">
+<meta name="twitter:description" content="Short description of my site.">
+<meta name="twitter:image" content="https://yourusername.github.io/images/preview.jpg">
+    <title>SHSSS Headlines</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Circular', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+        
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+            color: #ff385c;
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            color: #ff385c;
+            font-size: 28px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul li a i {
+            margin-right: 5px;
+        }
+        
+        nav ul li a:hover {
+            color: #ff385c;
+        }
+        
+        /* Dropdown menu */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 250px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 8px;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f7f7f7;
+            color: #ff385c;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .hero-content h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Chatbots Section */
+        .chatbots {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            gap: 20px;
+        }
+        
+        .chatbot-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            flex: 1;
+        }
+        
+        .chatbot-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .chatbot-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .daisuke .chatbot-image {
+            background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');
+        }
+        
+        .apibuddy .chatbot-image {
+            background-image: url('https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');
+        }
+        
+        .chatbot-content {
+            padding: 20px;
+        }
+        
+        .chatbot-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #ff385c;
+        }
+        
+        .chatbot-content p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #ff385c;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #e61e4d;
+        }
+        
+        /* Quotes Section */
+        .quotes {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .quotes h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #ff385c;
+        }
+        
+        .quote-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .quote-card {
+            background-color: #f7f7f7;
+            border-radius: 12px;
+            padding: 20px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .quote-text {
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .quote-author {
+            font-weight: 500;
+            color: #666;
+            text-align: right;
+        }
+        
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-content {
+            padding: 20px;
+        }
+        
+        .feature-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ff385c;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-content h3 i {
+            margin-right: 10px;
+        }
+        
+        .feature-content p {
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #ff385c;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: #ff385c;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            color: #ccc;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .hero-content h2 {
+                font-size: 36px;
+            }
+            
+            .chatbots {
+                flex-direction: column;
+            }
+            
+            .chatbot-card {
+                margin-bottom: 20px;
+            }
+            
+            .dropdown-content {
+                left: -50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-school logo-icon"></i>
+                    <h1>SHSSS Headlines</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-hands-helping"></i> Resources <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="https://shsss-org.github.io/books_pdf/"><i class="fas fa-book"></i> Books PDF</a>
+                                <a href="https://shsss-org.github.io/PYQ/"><i class="fas fa-book"></i> PYQ</a>
+                                <a href="https://shsss-org.github.io/summary-/"><i class="fas fa-file-alt"></i> Summary to Chapters</a>
+                                <a href="https://shsss-org.github.io/notices/"><i class="fas fa-sticky-note"></i> Notices</a>
+                                <a href="https://shsss-org.github.io/doubt_engine/"><i class="fas fa-question-circle"></i> Doubt Resolution</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-community"></i> Community <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="https://shsss-org.github.io/newcomers_msg/"><i class="fas fa-bullhorn"></i> Message to Newcomers</a>
+                                <a href="https://shsss-org.github.io/emotional_help/"><i class="fas fa-heart"></i> Emotional Help</a>
+                                <a href="https://shsss-org.github.io/deen_help/"><i class="fas fa-heart"></i> Deen Help</a>
+                                <a href="https://shsss-org.github.io/lost_found/"><i class="fas fa-search"></i> Lost and Found</a>
+                                <a href="https://flownetic.github.io/flovvnetic_soon/"><i class="fas fa-hand-holding-heart"></i> Items Needed</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-store"></i> Marketplace <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="https://shsss-org.github.io/Shop/"><i class="fas fa-tag"></i> Selling Items</a>
+                                <a href="https://flownetic.github.io/flovvnetic_soon/"><i class="fas fa-book"></i> Community chat</a>
+                                <a href="https://flownetic.github.io/flovvnetic_soon/"><i class="fas fa-money-bill-wave"></i> Cash to Online Money</a>
+                            </div>
+                        </li>
+                        <li><a href="https://shsss-org.github.io/exam/"><i class="fas fa-calendar-alt"></i> Exam Updates</a></li>
+                        <li><a href="https://shsss-org.github.io/about_us/"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="https://shsss-org.github.io/contact_us/"><i class="fas fa-info-circle"></i> contactUs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+<!-- Disclaimer Note -->
+<div id="disclaimer">
+  <p>
+    <strong>Disclaimer:</strong>  
+    The content on this site is for informational purposes only and may not always be accurate or complete.  
+    Please verify information independently. For services, kindly review the full disclaimer and terms before use.
+  </p>
+</div>
+
+<style>
+  #disclaimer {
+    background: #f8f8f8;      /* light background */
+    color: #444;              /* text color */
+    font-size: 14px;          /* small text */
+    padding: 12px 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+  }
+
+  #disclaimer strong {
+    color: #c00;              /* red highlight for "Disclaimer:" */
+  }
+</style>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to SHSSS Headlines</h2>
+                <p>Your community platform for boarding house students at our school</p>
+            </div>
+        </section>
+These bots are under Training but a beta Softlaunch is available for testing.
+        <!-- Chatbots Section -->
+        <section class="chatbots">
+            <div class="chatbot-card daisuke">
+                <div class="chatbot-image"></div>
+                <div class="chatbot-content">
+                    <h3>Daisuke Assistant</h3>
+                    <p>Get help with homework, schedules, and school-related questions from our friendly AI assistant Daisuke.</p>
+                    <a href="https://flownetic.github.io/advbot/" class="btn">Chat with Daisuke</a>
+                </div>
+            </div>
+            
+            <div class="chatbot-card apibuddy">
+                <div class="chatbot-image"></div>
+                <div class="chatbot-content">
+                    <h3>API Buddy</h3>
+                    <p>Need technical help or coding assistance? API Buddy is here to help with all your tech questions.</p>
+                    <a href="https://flownetic.github.io/tinyLLAMA/" class="btn">Chat with API Buddy</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unity Quotes Section -->
+        <section class="quotes">
+            <h2>Quotes on Unity</h2>
+            <div class="quote-container">
+                <div class="quote-card">
+                    <p class="quote-text">"Alone we can do so little; together we can do so much."</p>
+                    <p class="quote-author">- Helen Keller</p>
+                </div>
+                
+                <div class="quote-card">
+                    <p class="quote-text">"Unity is strength... when there is teamwork and collaboration, wonderful things can be achieved."</p>
+                    <p class="quote-author">- Mattie Stepanek</p>
+                </div>
+                
+                <div class="quote-card">
+                    <p class="quote-text">"We may have different religions, different languages, different colored skin, but we all belong to one human race."</p>
+                    <p class="quote-author">- Kofi Annan</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <h2 style="text-align: center; font-size: 32px; color: #ff385c; margin: 40px 0 20px;">Community Resources</h2>
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-book"></i> Books PDF</h3>
+                    <p>Access digital versions of textbooks and reference materials shared by students and teachers.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-file-alt"></i> Summary to Chapters</h3>
+                    <p>Find concise summaries and study guides for difficult chapters prepared by senior students.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-sticky-note"></i> Notices</h3>
+                    <p>Stay updated with important announcements from school administration and boarding house staff.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-tag"></i> Selling Items</h3>
+                    <p>Platform for students to sell items they no longer need to other boarding house members.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-question-circle"></i> Doubt Resolution</h3>
+                    <p>Get help with difficult subjects and homework problems from peers and tutors.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-bullhorn"></i> Message to Newcomers</h3>
+                    <p>Advice and welcome messages from senior students to help newcomers adjust to boarding life.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-heart"></i> Emotional Help</h3>
+                    <p>Support resources and counseling information for students feeling homesick or stressed.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-search"></i> Lost and Found</h3>
+                    <p>Report lost items or check if your found belongings have been claimed by others.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-money-bill-wave"></i>
