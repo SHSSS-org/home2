@@ -581,4 +581,144 @@ These bots are under Training but a beta Softlaunch is available for testing.
             
             <div class="feature-card">
                 <div class="feature-content">
-                    <h3><i class="fas fa-money-bill-wave"></i>
+                    <h3><i class="fas fa-money-bill-wave"></i> Cash to Online Money</h3>
+                    <p>Exchange cash for digital payments with trusted student intermediaries.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-hand-holding-heart"></i> Items Needed</h3>
+                    <p>Request to borrow items you temporarily need from fellow students.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-book"></i> Book Selling</h3>
+                    <p>Buy and sell used textbooks and novels within the boarding house community.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-calendar-alt"></i> Exam Updates</h3>
+                    <p>Get the latest information about exam schedules, syllabus changes, and important dates.</p>
+                </div>
+            </div>
+             <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-hand-holding-heart"></i>Ask for Deeni help</h3>
+                    <p>We provide connecting grounds between the servents of Allah(SWT).</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-money-bill-wave"></i>Raise request for Money exchange</h3>
+                    <p>Ask resident in digital format.Visit their rooms and exchange</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3><i class="fas fa-tag"></i> Raise an Item to sell</h3>
+                    <p>Sell the item you don't need byt can help others.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SHSSS Headlines</h3>
+                    <p>Connecting boarding house students for academic success and community building.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#"><i class="fas fa-home"></i> Home</a>
+                    <a href="https://shsss-org.github.io/contact_us/"><i class="fas fa-hands-helping"></i> Help Center</a>
+                    <a href="https://shsss-org.github.io/about_us/"><i class="fas fa-info-circle"></i> About Us</a>
+                    <a href="https://shsss-org.github.io/exam/"><i class="fas fa-calendar-alt"></i> Exam Updates</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> contac@shsss.org@gmail.com</p>
+                    
+                    <div class="social-icons">
+                        <a href="https://flownetic.github.io/flovvnetic_soon/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://flownetic.github.io/flovvnetic_soon/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://flownetic.github.io/flovvnetic_soon/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://flownetic.github.io/flovvnetic_soon/"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 SHSSS Headlines. All rights reserved.</p>
+            </div>
+             <div class="copyright">
+                <p>&copy; 2023 Flovvnetic. All rights reserved.</p>
+                <p>This website is powered by Flovvnetic [Ai powered Web Development Agency] JN</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbotCards = document.querySelectorAll('.chatbot-card');
+            
+            chatbotCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const chatbotName = this.querySelector('h3').textContent;
+                    alert(`Starting chat with ${chatbotName}`);
+                });
+            });
+            
+            // Update quote on click
+            const quoteCards = document.querySelectorAll('.quote-card');
+            const quotes = [
+                {
+                    text: "Unity is strength. Division is weakness.",
+                    author: "Swahili Proverb"
+                },
+                {
+                    text: "We are only as strong as we are united, as weak as we are divided.",
+                    author: "J.K. Rowling"
+                },
+                {
+                    text: "Coming together is a beginning. Keeping together is progress. Working together is success.",
+                    author: "Henry Ford"
+                },
+                {
+                    text: "We must all hang together, or assuredly we shall all hang separately.",
+                    author: "Benjamin Franklin"
+                }
+            ];
+            
+            quoteCards.forEach((card, index) => {
+                card.addEventListener('click', function() {
+                    const newIndex = (index + 1) % quotes.length;
+                    this.querySelector('.quote-text').textContent = `"${quotes[newIndex].text}"`;
+                    this.querySelector('.quote-author').textContent = `- ${quotes[newIndex].author}`;
+                });
+            });
+            
+            // Feature card interaction
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const featureName = this.querySelector('h3').textContent;
+                    alert(`Navigating to ${featureName} section`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
